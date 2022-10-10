@@ -1,0 +1,68 @@
+.FilmesRow {
+    margin-bottom: 30px;
+}
+
+.FilmesRow h2 {
+    margin: 0px 0px 0px 30px;
+}
+
+.FilmesRow--listarea {
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+
+.FilmesRow--list {
+    transition: all ease 0.5s;
+}
+
+.FilmesRow--item {
+    display: inline-block;
+    width: 150px;
+    cursor: pointer;
+}
+
+.FilmesRow--item img {
+    width: 100%;
+    transform: scale(0.9); 
+    transition: all ease 0.2s;
+}
+
+.FilmesRow--item img:hover {
+    transform:scale(1)
+}
+
+.FilmesRow--left,
+.FilmesRow--right {
+    position: absolute;
+    width: 40px;
+    height: 225px;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.6) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0; 
+    transition: all ease 0.5s;
+}
+
+.FilmesRow:hover .FilmesRow--left,
+.FilmesRow:hover .FilmesRow--right {
+    opacity: 1; 
+}
+
+.FilmesRow--left {
+    left: 0;
+}
+
+.FilmesRow--right {
+    right: 0;
+}
+
+@media (max-width:760px) {
+    .FilmesRow--right,
+    .FilmesRow--left {
+        opacity: 1;
+    }
+}
